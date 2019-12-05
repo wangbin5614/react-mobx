@@ -57,7 +57,7 @@ module.exports = function (app) {
     </Suspense>
 ```
 
-9. BrowserRouter路由设置basename='/activityWeb/m' 相当于设置了在服务器上的文件夹目录。
+9. BrowserRouter路由设置basename `<Router basename="/activityWeb/m"></Router>` 相当于设置了在服务器上的文件夹目录。
 
 10. withRouter =>路由组件可以直接从this.props上获取history,location,match ，但是非路由组件无法获取这些属性，所以用withRouter修饰后就可以直接获取到这些属性了，比如组件内的一些公用组件，肯定没有定义到路由中去，但是可能需要在这些组件内操作路由，此时就可以用withrouter修饰后调用。
 
