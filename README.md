@@ -5,8 +5,14 @@
 3. 对于state里的值取反  `this.setState(preS => ({;className={style.login_option};`
 4. create-react-app自配置了css 模块化 ，只需要定义css文件名为*.module.scss即可，已自动引入了scss;
 【注】：
-1>同时引入多个classname =>  `className={`clearfix ${'icon-font'} ${styles['icon-wenhao']}`}`
-2>如果classname为中划线拼接的，例如my-btn my-list这种 就需要写成 `className={`${style['my-btn']} ${style['my-list']}`}`
+* 同时引入多个
+```
+classname =>  className={`clearfix ${'icon-font'} ${styles['icon-wenhao']}`}
+```
+* 如果classname为中划线拼接的，例如my-btn my-list这种 就需要写成 
+```
+className={`${style['my-btn']} ${style['my-list']}`}
+```
 
 5. ref的用法
 ``` 
