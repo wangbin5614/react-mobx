@@ -9,8 +9,8 @@
 2>如果classname为中划线拼接的，例如my-btn my-list这种 就需要写成 `className={`${style['my-btn']} ${style['my-list']}`}`
 
 5. ref的用法
-1> `ref={el => this.ptr = el} => this.ptr`
-2> `ref='ptr' => this.refs.ptr`
+* `ref={el => this.ptr = el} => this.ptr`
+* `ref='ptr' => this.refs.ptr`
 【注】获取组件挂载后真正的dom节点：
 import ReactDOM from 'react-dom';
 ReactDOM.findDOMNode(this.ptr)
@@ -35,10 +35,12 @@ module.exports = function (app) {
 7. 配置打包目录 => 见config-overrides.js的配置，还需要在package.json下配置一个homepage:'.'，这样放服务器环境下才可以根据相对路径来找资源文件
 
 8. react自带了懒加载组件的方法 Suspense设置loading页，React.lazy懒加载
-import React, { Suspense } from 'react';
-<Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Loading...</div>}>
-    <Route component={React.lazy(() => import('~pages/notFound/index'))} />
-</Suspense>
+<code>
+    import React, { Suspense } from 'react';
+    <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Loading...</div>}>
+        <Route component={React.lazy(() => import('~pages/notFound/index'))} />
+    </Suspense>
+</code>
 
 9. BrowserRouter路由设置basename='/activityWeb/m' 相当于设置了在服务器上的文件夹目录
 
