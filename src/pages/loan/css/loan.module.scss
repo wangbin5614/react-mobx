@@ -1,0 +1,107 @@
+.loan {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 1.13rem;
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        height: 1.13rem;
+        background: #fff;
+        padding: 0.16rem 0 0.16rem 0.36rem;
+        box-sizing: border-box;
+        line-height: 0.77rem;
+        box-sizing: border-box;
+
+        .location {
+            font-size: 0.37rem;
+            color: #000000;
+            margin-right: 0.35rem;
+
+            img {
+                width: 0.23rem;
+                vertical-align: middle;
+            }
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 7.09rem;
+            font-size: 0.32rem;
+            background: #f4f4f4;
+            border-radius: 0.39rem;
+            color: #999999;
+
+            img {
+                width: 0.35rem;
+                margin-right: 0.13rem;
+            }
+        }
+    }
+
+    .loan_tab {
+        overflow: hidden;
+        background: #fff;
+        box-sizing: border-box;
+
+        li {
+            position: relative;
+            float: left;
+            width: 50%;
+            line-height: 1.12rem;
+            text-align: center;
+            font-size: 0.38rem;
+            color: #020202;
+
+            &.active {
+                font-weight: bold;
+                font-size: 0.45rem;
+                color: #0088fb;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -0.33rem;
+                    width: 0.67rem;
+                    height: 0.08rem;
+                    background-image: linear-gradient(90deg, #1c93ec 0%, #3e49f3 100%);
+                    border-radius: 0.13rem;
+                }
+            }
+        }
+    }
+
+    .banner_swiper {
+        padding: 0.27rem 0;
+        margin: 0 0.27rem;
+        box-sizing: border-box;
+
+        .swiper_slide {
+            height: 3.33rem;
+            border-radius: 0.11rem;
+            background: #fff;
+            overflow: hidden;
+
+            a,
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    .loan_slide {
+        height: calc(100vh - 3.6rem);
+    }
+}
