@@ -16,6 +16,7 @@
 `ReactDOM.findDOMNode(this.ptr)`
 
 6. 解决ajax跨域,proxy问题 在src的目录下新建一个setupProxy.js，然后写入
+
 <code>
 const proxy = require('http-proxy-middleware')
 module.exports = function (app) {
@@ -31,6 +32,7 @@ module.exports = function (app) {
     )
 }
 </code>
+
 7. 配置打包目录 => 见config-overrides.js的配置，还需要在package.json下配置一个homepage:'.'，这样放服务器环境下才可以根据相对路径来找资源文件
 
 8. react自带了懒加载组件的方法 Suspense设置loading页，React.lazy懒加载
