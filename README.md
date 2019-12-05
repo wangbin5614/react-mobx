@@ -12,11 +12,10 @@
 * `ref={el => this.ptr = el} => this.ptr`
 * `ref='ptr' => this.refs.ptr`
 【注】获取组件挂载后真正的dom节点：
-import ReactDOM from 'react-dom';
-ReactDOM.findDOMNode(this.ptr)
+`import ReactDOM from 'react-dom';`
+`ReactDOM.findDOMNode(this.ptr)`
 
-6. 解决ajax跨域,proxy问题 
-在src的目录下新建一个setupProxy.js，然后写入
+6. 解决ajax跨域,proxy问题 在src的目录下新建一个setupProxy.js，然后写入
 <code>
 const proxy = require('http-proxy-middleware')
 module.exports = function (app) {
